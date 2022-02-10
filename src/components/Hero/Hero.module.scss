@@ -1,0 +1,70 @@
+.logo_container {
+	margin-top: 2rem;
+}
+
+.logo {
+	font-size: 3.5rem;
+	font-weight: 900;
+	color: white;
+	padding: 3px;
+	letter-spacing: -2px;
+
+	// background: linear-gradient(-45deg, #fbff00, #edcb11, #d1b202, #c1a81b);
+	// background-size: 600% 600%;
+	// animation: gradient 2s cubic-bezier(0, 0, 0.76, 0.39) infinite;
+	// -webkit-animation: gradient 2s cubic-bezier(0, 0, 0.76, 0.39) infinite;
+	// -webkit-animation: gradient 2s cubic-bezier(0, 0, 0.76, 0.39) infinite;
+	// -moz-animation: gradient 2s cubic-bezier(0, 0, 0.76, 0.39) infinite;
+	// background-clip: text;
+	// -webkit-background-clip: text;
+	// -webkit-text-fill-color: transparent;
+
+	background: linear-gradient(304deg, #f5cb77, #e79a26, #ffe055, #d19444);
+	background-size: 250% 250%;
+	-webkit-animation: gradient 4s linear infinite;
+	animation: gradient 4s linear infinite;
+	-moz-animation: gradient 4s linear infinite;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	@media (max-width: 400px) {
+		font-size: 3rem;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.title {
+	margin: -20px;
+}
+
+.opensea {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 12px;
+	text-align: center;
+	letter-spacing: 5px;
+	color: #bfbfbf;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	margin-top: 12px;
+	margin-bottom: 0.7rem;
+	border: 0;
+	background-color: transparent;
+}
+
+.socials {
+	margin-top: 0.5rem;
+	font-size: 1rem;
+}

@@ -1,0 +1,43 @@
+@import "./variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./dark.scss";
+
+/* Addons */
+
+.absolute {
+	position: absolute;
+}
+
+.relative {
+	position: relative;
+}
+
+.z-0 {
+	z-index: 0;
+}
+
+.z-5 {
+	z-index: 5;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #d1d1d1 #000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #d1d1d1;
+	border-radius: 10px;
+	border: 0px solid #cfcfcf;
+}

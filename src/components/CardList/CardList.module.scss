@@ -1,0 +1,253 @@
+/**
+    CSS Module: CardList
+*/
+.typography {
+	display: inline-block;
+}
+
+.pop_up_text {
+	color: pink;
+	opacity: 1;
+	position: absolute;
+	font-size: 30vw;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.example_container div {
+	background: white;
+	border-radius: 30px;
+	width: 150px;
+	height: 150px;
+}
+
+.sticky_filters > div {
+	transform: none !important;
+	z-index: 99;
+	background: transparent;
+}
+
+.collection_filter {
+	font-weight: 200;
+	font-size: 16px;
+}
+
+.filter_loading {
+	background: linear-gradient(-45deg, #fbff00, #edcb11, #d1b202, #c1a81b);
+	background-size: 600% 600%;
+	animation: gradient 2s cubic-bezier(0, 0, 0.76, 0.39) infinite;
+	-webkit-animation: gradient 2s cubic-bezier(0, 0, 0.76, 0.39) infinite;
+	-webkit-animation: gradient 2s cubic-bezier(0, 0, 0.76, 0.39) infinite;
+	-moz-animation: gradient 2s cubic-bezier(0, 0, 0.76, 0.39) infinite;
+	background-clip: text;
+	/* -webkit-background-clip: text; */
+	-webkit-text-fill-color: transparent;
+	border: 1px solid #edcb11 !important;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.filter_block_container {
+	text-align: center;
+	color: white;
+}
+
+.filter_block {
+	display: inline-block;
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.445);
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	border-radius: 50px;
+	font-size: 0.7rem;
+	margin-right: 0.5rem;
+	text-transform: uppercase;
+	color: white;
+}
+
+.filter_block_invisible {
+	border: 0;
+}
+
+.filter_bar {
+	text-align: center;
+}
+
+.filter_button {
+	border: 1px solid #bcbcbc;
+	border-radius: 50px;
+	background-color: transparent;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 0.2rem;
+	padding-left: 3.5rem;
+	padding-right: 3.5rem;
+	margin: 8px;
+}
+
+.reset_button {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.search_by_token {
+	font-weight: 400;
+	text-align: center;
+	padding: 0.2rem;
+	background: linear-gradient(179deg, black, #202020);
+}
+
+.infinite_scroll {
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+.infinite_scroll_loading {
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.gutter_1 {
+	--bs-gutter-x: 0.5rem;
+	--bs-gutter-y: 0.5rem;
+}
+
+.total {
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	font-size: 18px;
+}
+
+.total_x {
+	font-size: 16px;
+	position: relative;
+	bottom: 3px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.discordlogin {
+	background-color: #738adb;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+	padding-left: 18px;
+	padding-right: 18px;
+	border: 0;
+	margin-top: 10px;
+}
+
+.joinhapeconnect {
+	background-color: #00aeff;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+	padding-left: 18px;
+	padding-right: 18px;
+	border: 0;
+	margin-top: 10px;
+}
+
+.glow {
+	width: 220px;
+	height: 50px;
+	border: none;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+}
+
+.glow:before {
+	content: "";
+	background: linear-gradient(
+		45deg,
+		#ff0000,
+		#fffb00,
+		#00ffd5,
+		#002bff,
+		#7a00ff,
+		#ff00c8,
+		#ff0000
+	);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 10px;
+}
+
+.glow:active {
+	color: #000;
+}
+
+.glow:active:after {
+	background: transparent;
+}
+
+.glow:hover:before {
+	opacity: 1;
+}
+
+.glow:after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #738adb;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+}
+
+@keyframes glowing {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.join_container {
+	background-color: #323e48;
+	display: inline-block;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.scroll_padding {
+	height: 150px;
+	@media (max-width: 920px) {
+		height: 1000px;
+	}
+}

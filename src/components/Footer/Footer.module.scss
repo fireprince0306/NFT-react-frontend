@@ -1,0 +1,27 @@
+.footer {
+	background-color: rgba(255, 255, 255, 0);
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	z-index: 99;
+	overflow: hidden;
+}
+
+.typography {
+	font-size: 18vw;
+	display: inline-block;
+	line-height: 0;
+}
+
+.text {
+	display: inline-block;
+	line-height: 1;
+}
+
+.hape_container {
+	display: flex;
+	justify-content: center;
+}

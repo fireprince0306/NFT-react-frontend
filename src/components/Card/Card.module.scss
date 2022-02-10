@@ -1,0 +1,213 @@
+/**
+    CSS Module: Card
+*/
+
+// Helpers
+@import "../../../styles/global/helpers.scss";
+
+// $card-width: 9.5rem;
+// $card-height: 9.5rem;
+$card-width: 12vw;
+$card-height: 12vw;
+
+.bad-col-3 {
+	flex: 0 0;
+}
+
+.scene {
+	width: $card-width;
+	height: $card-height;
+	perspective: 40rem;
+	overflow: hidden;
+	background-color: transparent;
+	padding: 3px;
+
+	@media screen and (max-width: 500px) {
+		width: 45vw;
+		height: 45vw;
+	}
+
+	@media screen and (min-width: 500px) and (max-width: 767px) {
+		width: 20vw;
+		height: 20vw;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 900px) {
+		width: 21vw;
+		height: 21vw;
+	}
+
+	@media screen and (min-width: 900px) {
+		width: 13vw;
+		height: 13vw;
+	}
+}
+
+.rank {
+	margin-left: 3px;
+	margin-top: 3px;
+	font-size: 80%;
+	color: white;
+	text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.token_id {
+	margin-right: 3px;
+	margin-top: 3px;
+	font-size: 80%;
+	color: white;
+	text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.avatar_image {
+	border-radius: 28px;
+	transition: 0.5s;
+}
+
+.zoom {
+	&:hover {
+		transform: translate(0, -4px);
+		transition: transform 0.3s ease;
+	}
+}
+
+.card {
+	text-align: left;
+	color: inherit;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	position: relative;
+	cursor: pointer;
+	margin: 1px;
+	// &:hover,
+	// &:focus,
+	// &:active {
+	// 	transform: rotateY(180deg);
+	// }
+
+	@include only-mobile() {
+		transition: transform 250ms;
+	}
+
+	&__face {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		backface-visibility: hidden;
+		border-radius: 28px;
+	}
+
+	&__title {
+		color: rgb(255, 255, 255);
+		font-size: 1.3rem;
+		white-space: nowrap;
+		overflow: hidden;
+		font-weight: 600;
+
+		&:hover {
+			overflow-x: auto;
+			-webkit-line-clamp: none;
+		}
+
+		@supports (-webkit-line-clamp: 3) {
+			overflow: hidden;
+			white-space: initial;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+	}
+
+	&__sub-title {
+		color: white;
+		font-size: 14px;
+		margin: 0;
+		margin-bottom: 5px;
+	}
+
+	&__description-container {
+		border-radius: 16px;
+		text-align: center;
+	}
+
+	&__icon {
+		padding-bottom: 2px;
+		color: gray;
+	}
+
+	&__body {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__description {
+		overflow: hidden;
+		color: white;
+		white-space: nowrap;
+		font-size: 13px;
+
+		@supports (-webkit-line-clamp: 5) {
+			&:hover {
+				overflow-y: auto;
+				-webkit-line-clamp: none;
+			}
+			overflow: hidden;
+			white-space: break-spaces;
+			display: -webkit-box;
+			-webkit-line-clamp: 5;
+			-webkit-box-orient: vertical;
+		}
+	}
+
+	&__description-job {
+		overflow: hidden;
+		color: white;
+		white-space: nowrap;
+		font-size: 13px;
+		&:visited {
+			text-decoration: none;
+			color: blue;
+		}
+
+		@supports (-webkit-line-clamp: 5) {
+			&:hover {
+				-webkit-line-clamp: none;
+			}
+			overflow: hidden;
+			white-space: initial;
+			display: -webkit-box;
+			-webkit-line-clamp: 5;
+			-webkit-box-orient: vertical;
+		}
+	}
+
+	&__readmore {
+		position: absolute;
+		right: 1rem;
+		bottom: 1rem;
+		color: black;
+	}
+
+	/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #888;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+}

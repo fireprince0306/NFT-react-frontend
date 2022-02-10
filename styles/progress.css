@@ -1,0 +1,169 @@
+/*
+ * react-circular-progressbar styles
+ * All of the styles in this file are configurable!
+ */
+
+.CircularProgressbar {
+	/*
+     * This fixes an issue where the CircularProgressbar svg has
+     * 0 width inside a "display: flex" container, and thus not visible.
+     */
+	width: 100%;
+	/*
+     * This fixes a centering issue with CircularProgressbarWithChildren:
+     * https://github.com/kevinsqi/react-circular-progressbar/issues/94
+     */
+	vertical-align: middle;
+	border: 2px solid rgba(48, 48, 48, 0.5);
+	border-radius: 50px;
+	padding: 4px;
+}
+
+.CircularProgressBar .CircularProgressbarPath {
+	stroke: #c7ad1c;
+	stroke-linecap: round;
+	transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbarPath {
+	stroke: #c7ad1c;
+	stroke-linecap: round;
+	transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressBar .CircularProgressbarTrail {
+	stroke: transparent;
+	/* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+	stroke-linecap: round;
+}
+
+.CircularProgressbarTrail {
+	stroke: transparent;
+	/* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+	stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbarText {
+	fill: #ffffff;
+	font-size: 28px;
+	font-weight: bold;
+	dominant-baseline: middle;
+	text-anchor: middle;
+}
+
+.CircularProgressbarText {
+	fill: #ffffff;
+	font-size: 28px;
+	font-weight: bold;
+	dominant-baseline: middle;
+	text-anchor: middle;
+}
+
+.CircularProgressbar .CircularProgressbarBackground {
+	fill: #d6d6d6;
+}
+
+.CircularProgressbarBackground {
+	fill: #d6d6d6;
+}
+
+/*
+   * Sample background styles. Use these with e.g.:
+   *
+   *   <CircularProgressbar
+   *     className="CircularProgressbar-inverted"
+   *     background
+   *     percentage={50}
+   *   />
+   */
+.CircularProgressbar.CircularProgressbar-inverted
+	.CircularProgressbar-background {
+	fill: #3e98c7;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+	fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+	stroke: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+	stroke: transparent;
+}
+
+/**
+* above styles can be removed by yourself
+* remained as before since you might use it in other components or pages.
+* If circle progress bar used in modal, you can reomve "CircleProgressBar" module from it and use custom style.
+* Now in your project, you are drawing every progress bar using svg and that is main reason why modal is laggying...
+*/
+
+/*new circle progress bar style*/
+.circle-progress-bar {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.progress-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px;
+	border: 2px solid rgba(48, 48, 48, 0.5);
+	border-radius: 50%;
+}
+
+#progress-spinner {
+	border-radius: 50%;
+	height: 32px;
+	width: 32px;
+}
+
+#middle-circle {
+	position: absolute;
+	border-radius: 50%;
+	height: 28px;
+	width: 28px;
+	background-color: #26272c;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: large;
+	font-weight: bold;
+	font-size: 8px;
+	color: #fff;
+}
+
+#modal-container {
+	opacity: 0;
+}
+
+/* .modal-container .opened .modal-dialog {
+	opacity: 1;
+	transition: opacity .3s;
+	transition-delay: .3s;
+}
+
+.modal-container .closed .modal-dialog {
+	opacity: 0;
+} */
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	animation-duration: .3s;
+	animation-delay: 2s;
+}
